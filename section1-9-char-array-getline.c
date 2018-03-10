@@ -41,6 +41,7 @@ int main() {
     if (max > 0) {
         printf("The longest line is:\n");
         printf("%s", longest);
+        printf("Length of the string: %d\n", max);
     }
     
     return 0;
@@ -73,6 +74,13 @@ int getoneline(char s[], int lim) {
     if (c == '\n') {
         s[i] = c;
         ++i;
+    } else {
+        // Exercise 1-16. Revise the main routine of the longest-line program so
+        // it will correctly print the length of arbitrarily long input lines,
+        // and as much as possible of the text.
+        while((c = getchar()) != EOF && c != '\n') {
+            ++i;
+        }
     }
     
     // put a null value at the end of the line.
