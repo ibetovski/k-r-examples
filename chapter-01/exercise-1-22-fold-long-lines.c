@@ -135,10 +135,7 @@ void foldLine(char line[], int len) {
  */
 int printline(char line[], int len) {
   int i;
-  int inneri;
-  int columnsCount;
-
-  columnsCount = 0;
+  
   for (i = 0; i < len; i++) {
     putchar(line[i]);
   }
