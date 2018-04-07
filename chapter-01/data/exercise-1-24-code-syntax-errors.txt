@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+if ((
+/*
+  {{{{{{this is without a closing brace but it is in a comment so it should be fine { 
+ */ 
+
+// {{{[[[[ this won't be an error too.
+
+"{This is a (comment so it [ should be fine too ["
+)) {
+  
+}
+
+"This should not be fine:"
+[ // this has no closing bracket
+{ // this has no closing brace
